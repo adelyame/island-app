@@ -4,10 +4,10 @@ import './App.css';
 
 
 class Island {
-  constructor(){
-      this.wood = 0;
-      this.water = 0;
-      this.food = 0;
+  constructor(var1 , var2, var3){
+      this.wood = var1;
+      this.water = var2;
+      this.food = var3;
       
   }
 
@@ -52,7 +52,7 @@ class Human{
 /*function All(){
   
 }*/
-let island = new Island();
+let island = new Island(1000, 2000, 500);
 let human = new Human();
 
 class IslandApp extends React.Component {
@@ -63,15 +63,17 @@ class IslandApp extends React.Component {
     };
   }
   handleClick = () =>{
-    this.setState({clickedText: human.setWood(50)})
-    return island.wood;
-  }
+    this.setState({clickedText: human.setWood(50)});
+  };
+  secondClick = () => {
+    this.setState({clickedText:island.setWood(50)});
+  };
   render(){
     const { clickedText } = this.state;
     return (
       <div className='app'>
     <div className='island-app'>
-    <h1> Древесина - {island.wood} </h1>
+    <h1> Древесина - {clickedText } </h1>
     <h1> Вода - {island.water}</h1>
     <h1> Еда - {island.food}</h1>
     </div>
@@ -80,7 +82,7 @@ class IslandApp extends React.Component {
       <h1> Получено воды - {human.water}</h1>
       <h1> Получено еды - {human.food}</h1>
     </div> 
-      <button onClick={() => this.handleClick()}>Использовать древесину</button>
+      <button onClick={() => this.handleClick() && this.secondClick()}>Использовать древесину</button>
     <button>Использовать воду</button>
     <button>Использовать еду</button>
    </div>
