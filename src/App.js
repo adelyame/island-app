@@ -122,20 +122,29 @@ class IslandApp extends React.Component {
     const{ clickedWater, clickedWater2 } = this.state;
     const { clickedFood, clickedFood2 } = this.state;
     return (
+      
+      <div className = 'wrapper'>
+      <div className = 'main'>
       <div className='app'>
+      <img className="img" src="https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/1477284/600/400/m2/fpnw/wm1/island-.jpg?1469308797&s=44f60086520bb9fd286a49f4e8deced7"></img>
     <div className='island-app'>
-    <h1> Древесина - {clickedText2}</h1>
-    <h1> Вода - {clickedWater}</h1>
-    <h1> Еда - {clickedFood}</h1>
+    
+    <h1>Ресурсы острова</h1>
+    <h2> Древесина - {clickedText2}</h2>
+    <h2> Вода - {clickedWater}</h2>
+    <h2> Еда - {clickedFood}</h2>
     </div>
     <div className='human-app'>
-      <h1> Получено древесины - {clickedText}</h1> 
-      <h1> Получено воды - {clickedWater2}</h1>
-      <h1> Получено еды - {clickedFood2}</h1>
-    </div> 
-      <button onClick={() => this.handleClick()}>Использовать древесину</button>
+      <h1>Преобретенные ресурсы</h1>
+      <h2> Получено древесины - {clickedText}</h2> 
+      <h2> Получено воды - {clickedWater2}</h2>
+      <h2> Получено еды - {clickedFood2}</h2>
+    </div> </div><div className='button'>
+    <button onClick={() => this.handleClick()}>Использовать древесину</button>
     <button onClick = {() => this.handleClick2()}>Использовать воду</button>
     <button onClick = {() => this.handleClick3()}>Использовать еду </button>
+      </div>
+   </div>
    </div>
     );
   };

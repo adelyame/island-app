@@ -1,3 +1,90 @@
-.app{
+@import url('https://fonts.googleapis.com/css?family=Cuprum&display=swap');
+
+.wrapper{
+  display: flex;
+  height:100vh;
+  align-items: center;
   background: url("img/back.png") center center no-repeat;
+}
+
+.main{
+  height:70vh;
+  border-radius: 5px;
+  background: rgba(241,166,95,1);
+  background: -moz-linear-gradient(left, rgba(241,166,95,1) 0%, rgba(219,181,77,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,166,95,1)), color-stop(100%, rgba(219,181,77,1)));
+  background: -webkit-linear-gradient(left, rgba(241,166,95,1) 0%, rgba(219,181,77,1) 100%);
+  background: -o-linear-gradient(left, rgba(241,166,95,1) 0%, rgba(219,181,77,1) 100%);
+  background: -ms-linear-gradient(left, rgba(241,166,95,1) 0%, rgba(219,181,77,1) 100%);
+  background: linear-gradient(to right, rgba(241,166,95,1) 0%, rgba(219,181,77,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1a65f', endColorstr='#dbb54d', GradientType=1 );
+  
+
+margin: 0 auto;
+width:60%;
+-webkit-box-shadow: -2px 10px 35px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 10px 35px -4px rgba(0,0,0,0.75);
+box-shadow: -2px 10px 35px -4px rgba(0,0,0,0.75);
+}
+h1{
+  color:#11123f;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 25px;
+}
+h2{
+
+  color:#11123f;
+  font-family: 'Cuprum', sans-serif;
+  font-weight: lighter;
+}
+.app{
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  margin: 10px 10px;
+}
+
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+button{
+  text-decoration: none;
+  color:#0e1116;
+  border:none;
+  border-radius: 4px;
+  padding:10px 14px;
+  font-size: 15px;
+  background-color: #8a7090;
+  font-family: Arial, Helvetica, sans-serif;
+
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+
+-webkit-transition: background-color 0.1s linear;
+-moz-transition: background-color 0.1s linear;
+-o-transition: background-color 0.1s linear;
+transition: background-color 0.1s linear;  
+  margin: 0 3px;
+  max-width:50vh;
+}
+button:hover{
+ background-color: #89a7a7;
+}
+.img{
+  width:35%;
+  height: auto;
+  justify-content: center;
+}
+.app{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.island-app{
+  margin:0 5vh;
+  justify-content: center;
+}
+.human-app{
+  margin:0 5vh;
 }
